@@ -1,3 +1,5 @@
+//I used this code snippet for the scrolling curtain effect
+
 $(function() {
     
   $('a[href*=#]:not([href=#])').click(function() {
