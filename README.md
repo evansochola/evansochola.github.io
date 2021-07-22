@@ -1,4 +1,10 @@
 ## Hi there, I'm Evans 👋
 
-### Github Stats
-![Evans' Github Stats](https://github-readme-stats.vercel.app/api?username=Joelevans&show_icons=true&theme=dracula)
+### Personal Website --Under-development
+
+Access it here : https://joelevans.github.io/
+
+#### Technologies used
+
+HTML 5
+SASS
