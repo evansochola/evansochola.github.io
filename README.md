@@ -8,3 +8,7 @@ Access it here : https://joelevans.github.io/
 
 HTML 5
 SASS
+
+#### Build commands
+
+sass --watch ./src/css/style.scss:./build/css/style.css
