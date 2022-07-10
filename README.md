@@ -2,7 +2,7 @@
 
 ### Personal Website --Under-development
 
-Access it here : https://joelevans.github.io/
+Access it here : https://evansochola.github.io
 
 #### Technologies used
 
