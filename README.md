@@ -1,13 +1,13 @@
 ## Hi there, I'm Evans 👋
 
-### Personal Website --Under-development
+### Personal Website
 
 Access it here : https://evansochola.github.io
 
 #### Technologies used
 
-HTML 5
-SASS
+HTML5, CSS3
+CSS Preprocessor - SASS
 
 #### Build commands
 
