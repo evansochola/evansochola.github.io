@@ -18,7 +18,7 @@ body {
     // position: fixed;
     width: 100%;
     padding: 2rem 7rem;
-
+    display: none;
     .container {
       width: 100%;
       margin-left: auto;
@@ -63,6 +63,7 @@ body {
   .main {
     height: fit-content;
     padding: 7rem 7rem;
+    display: none;
 
     .text-1 {
       font-size: 1.5rem;
