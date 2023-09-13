@@ -78,5 +78,15 @@ body .main .social-media-links div {
 body .main .social-media-links a {
   color: #f6f4e6;
 }
+body header .social-media-links {
+  display: flex;
+  margin-top: 1rem;
+}
+body header .social-media-links div {
+  padding-right: 0.5rem;
+}
+body header .social-media-links a {
+  color: #f6f4e6;
+}
 
 /*# sourceMappingURL=style.css.map */

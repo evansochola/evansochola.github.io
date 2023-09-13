@@ -94,4 +94,17 @@ body {
     }
   }
 
+  header {
+    .social-media-links {
+      display: flex;
+      margin-top: 1rem;
+      
+      div {
+        padding-right: 0.5rem;
+      }
+      a {
+       color: #f6f4e6; 
+      }
+    }
+  }
 }
