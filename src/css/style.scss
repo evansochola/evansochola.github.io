@@ -95,16 +95,29 @@ body {
   }
 
   header {
+    max-height: 100vh;
+
+    #prof-pic {
+      width: 250px;
+      height: 250px;
+    }
     .social-media-links {
       display: flex;
       margin-top: 1rem;
       
       div {
         padding-right: 0.5rem;
+
+        .img-300 {
+          width: 300px;
+          height: 300px;
+        }
       }
       a {
        color: #f6f4e6; 
       }
     }
   }
+  
 }
+
