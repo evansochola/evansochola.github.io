@@ -273,5 +273,64 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  body {
+    
+    header {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .main {
+      .container-1 {
+        .container-dark {
+          padding-left: 5rem;
+          padding-right: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width:1440px) {
+  body {
+    header {
+      padding: 2rem 1rem 0rem 2rem;
+
+      .navb div {
+        color:black
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    header {
+      padding: 2rem 4rem 0rem 4rem;
+
+      .navb .logo .brand {
+        font-size: v.$font-size-upper-mid;
+      }
+    }
+    .main {
+      .container-1 {
+        .container-light .landing {
+          padding: 0 0 0 0;
+          margin-left:25rem;
+          margin-right: 25rem;
+          margin-bottom: 10rem;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+        .container-dark {
+          padding-left: 25rem;
+          padding-right: 25rem;
+
+        }
+      }
+    }
+  }
+}
 
 
