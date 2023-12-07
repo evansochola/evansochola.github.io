@@ -102,7 +102,7 @@ body .main .container-1 .container-light .landing .social-media-links a {
 body .main .container-1 .container-light .landing .social-media-links div {
   margin: 0 5px;
 }
-body .main .container-1 .container-light .welcome-intro {
+body .main .container-1 .container-light .welcome-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,6 +258,10 @@ body footer .footer-copyright a {
     margin-bottom: 10rem;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+  body .main .container-1 .container-light .landing .welcome-text p {
+    font-size: 1.1em;
+    line-height: 30px;
   }
   body .main .container-1 .container-dark {
     padding-left: 25rem;

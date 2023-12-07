@@ -117,7 +117,7 @@ body {
               }
             }
           }
-          .welcome-intro {
+          .welcome-image {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -322,7 +322,14 @@ body {
           margin-bottom: 10rem;
           flex-direction: row-reverse;
           justify-content: space-between;
+
+          .welcome-text {
+            p {
+              font-size: v.$font-size-mid;
+              line-height: 30px;
+            }
         }
+          }
         .container-dark {
           padding-left: 25rem;
           padding-right: 25rem;
