@@ -89,8 +89,8 @@ body {
     min-height: calc(100% - 60px);
     
     .container-1 {
-
         .container-light {
+          color:v.$black;
           margin-top: 70px;
           background-color: v.$white-plain;
           padding: 32px;
@@ -104,7 +104,13 @@ body {
             max-width: 100%;
             font-size: v.$font-size-small;
             background-color: v.$white-plain;
-            
+
+            .welcome-image {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+            }
             .social-media-links {
               display: flex;
               flex-direction: row;
@@ -116,12 +122,6 @@ body {
                 margin: 0 5px ;
               }
             }
-          }
-          .welcome-image {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
           }
         }
 
@@ -140,8 +140,7 @@ body {
                 bottom: 0;
                 left: -30px;
               }
-              
-              
+
               font-size: v.$font-size-small;
               font-weight: 100;
               line-height: 1.6;
@@ -273,38 +272,8 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  body {
-    
-    header {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    .main {
-      .container-1 {
-        .container-dark {
-          padding-left: 5rem;
-          padding-right: 5rem;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) and (max-width:1440px) {
-  body {
-    header {
-      padding: 2rem 1rem 0rem 2rem;
-
-      .navb div {
-        color:black
-      }
-    }
-  }
-}
-
-@media (min-width: 1440px) {
+// Desktop version
+@media (min-width: 1920px) {
   body {
     header {
       padding: 2rem 4rem 0rem 4rem;
@@ -315,25 +284,27 @@ body {
     }
     .main {
       .container-1 {
-        .container-light .landing {
-          padding: 0 0 0 0;
-          margin-left:25rem;
-          margin-right: 25rem;
-          margin-bottom: 10rem;
-          flex-direction: row-reverse;
-          justify-content: space-between;
+        .container-light {
+          padding-left: 432px;
+          padding-right: 432px;
 
-          .welcome-text {
-            p {
-              font-size: v.$font-size-mid;
-              line-height: 30px;
+          .landing {
+            padding: 0 0 0 0;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-bottom: 10rem;
+            
+            .welcome-text {
+              p {
+                font-size: v.$font-size-mid;
+                line-height: 30px;
+              }
             }
-        }
           }
+        } 
         .container-dark {
-          padding-left: 25rem;
-          padding-right: 25rem;
-
+          padding-left: 432px;
+          padding-right: 432px;
         }
       }
     }

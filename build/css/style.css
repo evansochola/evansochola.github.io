@@ -77,6 +77,7 @@ body .main {
   min-height: calc(100% - 60px);
 }
 body .main .container-1 .container-light {
+  color: #1d1d20;
   margin-top: 70px;
   background-color: #ffffff;
   padding: 32px;
@@ -91,6 +92,12 @@ body .main .container-1 .container-light .landing {
   font-size: 0.9em;
   background-color: #ffffff;
 }
+body .main .container-1 .container-light .landing .welcome-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 body .main .container-1 .container-light .landing .social-media-links {
   display: flex;
   flex-direction: row;
@@ -101,12 +108,6 @@ body .main .container-1 .container-light .landing .social-media-links a {
 }
 body .main .container-1 .container-light .landing .social-media-links div {
   margin: 0 5px;
-}
-body .main .container-1 .container-light .welcome-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 body .main .container-1 .container-dark {
   background-color: #1d1d20;
@@ -226,46 +227,30 @@ body footer .footer-copyright a {
   color: #f6f6f6;
 }
 
-@media (min-width: 768px) {
-  body header {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  body .main .container-1 .container-dark {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1440px) {
-  body header {
-    padding: 2rem 1rem 0rem 2rem;
-  }
-  body header .navb div {
-    color: black;
-  }
-}
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
   body header {
     padding: 2rem 4rem 0rem 4rem;
   }
   body header .navb .logo .brand {
     font-size: 1.3em;
   }
+  body .main .container-1 .container-light {
+    padding-left: 432px;
+    padding-right: 432px;
+  }
   body .main .container-1 .container-light .landing {
     padding: 0 0 0 0;
-    margin-left: 25rem;
-    margin-right: 25rem;
-    margin-bottom: 10rem;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-bottom: 10rem;
   }
   body .main .container-1 .container-light .landing .welcome-text p {
     font-size: 1.1em;
     line-height: 30px;
   }
   body .main .container-1 .container-dark {
-    padding-left: 25rem;
-    padding-right: 25rem;
+    padding-left: 432px;
+    padding-right: 432px;
   }
 }
 
