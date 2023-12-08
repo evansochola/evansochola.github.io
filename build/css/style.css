@@ -91,12 +91,17 @@ body .main .container-1 .container-light .landing {
   max-width: 100%;
   font-size: 0.9em;
   background-color: #ffffff;
+  margin-bottom: 5rem;
 }
 body .main .container-1 .container-light .landing .welcome-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+body .main .container-1 .container-light .landing .welcome-text p {
+  font-size: 1.1em;
+  line-height: 20px;
 }
 body .main .container-1 .container-light .landing .social-media-links {
   display: flex;

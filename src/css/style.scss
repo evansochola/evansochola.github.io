@@ -67,7 +67,6 @@ body {
     }
   }
   
-
   .sidebar {
     position: fixed;
     display: none;
@@ -104,12 +103,20 @@ body {
             max-width: 100%;
             font-size: v.$font-size-small;
             background-color: v.$white-plain;
+            margin-bottom: 5rem;
+
 
             .welcome-image {
               display: flex;
               flex-direction: column;
               justify-content: center;
               text-align: center;
+            }
+            .welcome-text {
+              p {
+                font-size: v.$font-size-mid;
+                line-height: 20px;
+              }
             }
             .social-media-links {
               display: flex;
@@ -123,6 +130,7 @@ body {
               }
             }
           }
+        
         }
 
         .container-dark {
