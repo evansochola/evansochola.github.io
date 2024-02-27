@@ -22,6 +22,12 @@ a {
   font-weight: 700;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 body {
   color: #f6f6f6;
 }
@@ -113,6 +119,22 @@ body .main .container-1 .container-light .landing .social-media-links a {
 }
 body .main .container-1 .container-light .landing .social-media-links div {
   margin: 0 5px;
+}
+body .main .container-1 .projects {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1d1d20;
+}
+body .main .container-1 .projects .project {
+  position: relative;
+  margin-bottom: 1.2em;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+}
+body .main .container-1 .projects .project .project-info {
+  padding: 2em;
 }
 body .main .container-1 .container-dark {
   background-color: #1d1d20;

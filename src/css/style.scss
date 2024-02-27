@@ -24,6 +24,11 @@ a {
   font-weight: 700;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 body {
   color: v.$white;
@@ -133,6 +138,25 @@ body {
         
         }
 
+        .projects {
+          background-color: v.$white-plain;
+          display: flex;
+          flex-direction: column;
+          // padding: 32px;
+          align-items: center;
+          color:v.$black;
+
+          .project {
+            position: relative;
+            margin-bottom: 1.2em;
+            border-radius: 0.2rem;
+            background-color: v.$white-plain;
+
+            .project-info {
+              padding: 2em;
+            }
+          }
+        }
         .container-dark {
           background-color: v.$black;
           padding: 32px;
