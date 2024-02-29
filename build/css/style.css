@@ -179,7 +179,7 @@ body .main .container-1 .container-dark .main-projects .project-wrapper div {
   position: relative;
   padding: 30px 30px 0;
 }
-body .main .container-1 .container-dark .main-projects .project-wrapper div a {
+body .main .container-1 .container-dark .main-projects .project-wrapper div span {
   color: #f6f6f6;
   margin-bottom: 15px;
   line-height: 1.5;

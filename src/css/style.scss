@@ -110,7 +110,6 @@ body {
             background-color: v.$white-plain;
             margin-bottom: 5rem;
 
-
             .welcome-image {
               display: flex;
               flex-direction: column;
@@ -205,7 +204,7 @@ body {
                 position: relative;
                 padding: 30px 30px 0;
                 
-                a {
+                span {
                   color: v.$white;
                   margin-bottom: 15px;
                   line-height: 1.5;
