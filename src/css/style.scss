@@ -32,6 +32,8 @@ ul {
 
 body {
   color: v.$white;
+  height: 100%;
+  overflow: hidden;
 
   #prof-pic {
     width: 220px;
@@ -95,7 +97,7 @@ body {
     .container-1 {
         .container-light {
           color:v.$black;
-          margin-top: 70px;
+          margin-top: 0px;
           background-color: v.$white-plain;
           padding: 32px;
           
@@ -108,7 +110,7 @@ body {
             max-width: 100%;
             font-size: v.$font-size-small;
             background-color: v.$white-plain;
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
 
             .welcome-image {
               display: flex;
@@ -141,18 +143,53 @@ body {
           background-color: v.$white-plain;
           display: flex;
           flex-direction: column;
-          // padding: 32px;
-          align-items: center;
           color:v.$black;
 
-          .project {
-            position: relative;
-            margin-bottom: 1.2em;
-            border-radius: 0.2rem;
-            background-color: v.$white-plain;
+          h2 {
+            font-size: v.$font-size-upper-mid;
+            margin-bottom: 1em;
+            transition: .5s;
 
-            .project-info {
-              padding: 2em;
+            &:hover {
+              color: v.$yellow;
+            }
+          }
+
+          .projects-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .project {
+              position: relative;
+              margin-bottom: 1.2em;
+              border-radius: 0.2rem;
+              background-color: v.$white-plain;
+
+              .project-info {
+                position: relative;
+                padding: 1.5em 0.5em;
+                display: grid;
+                grid-template-rows: 1fr 0fr 0fr;
+                background-color: v.$white-plain;
+                border-top-left-radius: 8px;
+                
+                #image {
+                  width: 90%;
+                  height: 150px;
+                  padding: 0;
+                  margin: 0;
+
+                  img {
+                    border-radius: 8px;
+                  }
+                }
+
+                h5, a {
+                  display: block;
+                  padding: 1rem 0rem;
+                  width: 90%;
+                }
+              }
             }
           }
         }
@@ -323,7 +360,7 @@ body {
             padding: 0 0 0 0;
             flex-direction: row-reverse;
             justify-content: space-between;
-            margin-bottom: 10rem;
+            margin-bottom: 2rem;
             
             .welcome-text {
               p {
@@ -333,6 +370,10 @@ body {
             }
           }
         } 
+        .projects {
+          padding-left: 432px;
+          padding-right: 432px;
+        }
         .container-dark {
           padding-left: 432px;
           padding-right: 432px;
@@ -341,5 +382,3 @@ body {
     }
   }
 }
-
-

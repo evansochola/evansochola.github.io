@@ -30,6 +30,8 @@ ul {
 
 body {
   color: #f6f6f6;
+  height: 100%;
+  overflow: hidden;
 }
 body #prof-pic {
   width: 220px;
@@ -84,7 +86,7 @@ body .main {
 }
 body .main .container-1 .container-light {
   color: #1d1d20;
-  margin-top: 70px;
+  margin-top: 0px;
   background-color: #ffffff;
   padding: 32px;
 }
@@ -97,7 +99,7 @@ body .main .container-1 .container-light .landing {
   max-width: 100%;
   font-size: 0.9em;
   background-color: #ffffff;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 body .main .container-1 .container-light .landing .welcome-image {
   display: flex;
@@ -124,17 +126,47 @@ body .main .container-1 .projects {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: #1d1d20;
 }
-body .main .container-1 .projects .project {
+body .main .container-1 .projects h2 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  transition: 0.5s;
+}
+body .main .container-1 .projects h2:hover {
+  color: #fddb3a;
+}
+body .main .container-1 .projects .projects-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .main .container-1 .projects .projects-row .project {
   position: relative;
   margin-bottom: 1.2em;
   border-radius: 0.2rem;
   background-color: #ffffff;
 }
-body .main .container-1 .projects .project .project-info {
-  padding: 2em;
+body .main .container-1 .projects .projects-row .project .project-info {
+  position: relative;
+  padding: 1.5em 0.5em;
+  display: grid;
+  grid-template-rows: 1fr 0fr 0fr;
+  background-color: #ffffff;
+  border-top-left-radius: 8px;
+}
+body .main .container-1 .projects .projects-row .project .project-info #image {
+  width: 90%;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+body .main .container-1 .projects .projects-row .project .project-info #image img {
+  border-radius: 8px;
+}
+body .main .container-1 .projects .projects-row .project .project-info h5, body .main .container-1 .projects .projects-row .project .project-info a {
+  display: block;
+  padding: 1rem 0rem;
+  width: 90%;
 }
 body .main .container-1 .container-dark {
   background-color: #1d1d20;
@@ -269,11 +301,15 @@ body footer .footer-copyright a {
     padding: 0 0 0 0;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
   body .main .container-1 .container-light .landing .welcome-text p {
     font-size: 1.1em;
     line-height: 30px;
+  }
+  body .main .container-1 .projects {
+    padding-left: 432px;
+    padding-right: 432px;
   }
   body .main .container-1 .container-dark {
     padding-left: 432px;
