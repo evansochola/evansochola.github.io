@@ -162,6 +162,7 @@ body .main .container-1 .projects .projects-row .project .project-info #image {
 }
 body .main .container-1 .projects .projects-row .project .project-info #image img {
   border-radius: 8px;
+  cursor: pointer;
 }
 body .main .container-1 .projects .projects-row .project .project-info h5, body .main .container-1 .projects .projects-row .project .project-info a {
   display: block;
