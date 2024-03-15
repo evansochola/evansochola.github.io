@@ -73,8 +73,6 @@ body {
       }
     }
   }
-  
-
 }
 
 // Desktop version
@@ -82,48 +80,14 @@ body {
   body {
     height: 100vh;
     overflow: hidden;
+
     header {
       padding: 2rem 4rem 0rem 4rem;
-
       .navb .logo .brand {
         font-size: v.$font-size-upper-mid;
       }
     }
-    .main {
-      margin: 0rem 4rem 0rem 4rem;
-      height: calc(100% - 125px);
-      overflow: hidden;
-
-      .container {
-        .main-content {
-          display: grid;
-          border-style: solid;
-
-          .landing {
-            padding: 0 0 0 0;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            
-            .welcome-text {
-              p {
-                font-size: v.$font-size-mid;
-                line-height: 30px;
-              }
-            }
-          }
-        }
-        .projects {
-          padding-left: 432px;
-          padding-right: 432px;
-        }
-        .container-dark {
-          padding-left: 432px;
-          padding-right: 432px;
-        }
-      }
-    }
-
+ 
     .main-grid {
       bottom: 0;
       left: 0;
