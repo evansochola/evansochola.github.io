@@ -20,14 +20,14 @@ a {
   text-decoration: none;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 body {
@@ -78,7 +78,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(100% - 125px);
     max-width: 100vw;
 
     .container-grid {
@@ -110,61 +109,71 @@ body {
             }
           }
         }
+        .about-me {
+          a {
+            color: v.$black;
+
+            &:hover {
+              color: v.$yellow-light;
+              cursor: pointer;
+            }
+          }
+        }
         .projects {
           .projects-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             grid-auto-rows: minmax(100px, auto);
 
-              .project {
-                background-color: v.$white-plain;
-                width: 100%;
-                border-width: 1px;
-                background-color: v.$white-plain;
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+            .project {
+              background-color: v.$white-plain;
+              width: 100%;
+              border-width: 1px;
+              background-color: v.$white-plain;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 
-                .project-image {
-                  width: 100%;
-                  height: 150px;
-                  padding: 0;
-                  margin: 0;
-                  
-                  img {
-                    border-top-left-radius: 8px;
-                    border-top-right-radius: 8px;
-                    cursor: pointer;
-                  }
+              .project-image {
+                width: 100%;
+                height: 150px;
+                padding: 0;
+                margin: 0;
+                
+                img {
+                  border-top-left-radius: 8px;
+                  border-top-right-radius: 8px;
+                  cursor: pointer;
                 }
-                .project-text {
-                  padding-top: 1rem;
-                  padding-left: 1rem;
-                  border-width: 1px;
-                  
-                  h5 {
-                    margin-bottom: 0.5rem;
-                  }
-  
-                  a {
-                    display: block;
-                    width: 90%;
-                    color: v.$black;
-                  }
+              }
+              .project-text {
+                padding-top: 1rem;
+                padding-left: 1rem;
+                border-width: 1px;
+                
+                h5 {
+                  margin-bottom: 0.5rem;
+                }
+
+                a {
+                  display: block;
+                  width: 90%;
+                  color: v.$black;
                 }
               }
             }
           }
         }
       }
+    }
   }
 }
 
 // Desktop version
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   body {
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
 
     header {
       padding: 2rem 4rem 0rem 4rem;
@@ -175,7 +184,7 @@ body {
  
     .main {
       height: calc(100% - 125px);
-      overflow-y: auto;
+      overflow-y: visible;
       max-width: 100vw;
       margin: 0rem 4rem 0rem 4rem;
 
@@ -234,7 +243,7 @@ body {
             }
           }
           .about-me {
-            padding-top: 3rem;
+            padding-top: 80px;
             color: v.$black;
           }
           .projects {
@@ -247,7 +256,6 @@ body {
             h2 {
               font-size: v.$font-size-upper-mid;
               margin-bottom: 1em;
-              transition: .5s;
   
               &:hover {
                 color: v.$yellow;
@@ -298,8 +306,8 @@ body {
   }
 }
 
-//mobile version
-@media only screen and (max-width: 1024px) {
+//responsive version
+@media only screen and (max-width: 1280px){
   body {
     .main {
       margin: 0rem 2rem 0rem 2rem;
@@ -307,6 +315,8 @@ body {
       .container-grid {
         margin-top: 70px;
         color: v.$black;
+        display: grid;
+
         .landing-page {
           .landing {
             margin-bottom: 80px;
@@ -321,10 +331,35 @@ body {
 
             .projects-row {
               gap: 5rem;
+              padding-left: 1rem;
+              padding-right: 1rem;
 
               .project {
                 position: relative;
               }
+            }
+          }
+        }
+        .sidebar {
+          background-color: v.$white-plain;
+          border-right-style: none;
+          border-top-style: none;
+          border-bottom-style: none;
+          border-width: 2px;
+          align-self: start;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          
+          div {
+            margin-top: 20px;
+            color: v.$black;
+            height: 40px;
+            padding: 1.5em;
+
+            a {
+              color: v.$black;
             }
           }
         }
@@ -333,7 +368,17 @@ body {
   }
 }
 
-//mobile small size
+@media only screen and (max-width: 1280px) and (orientation: landscape) {
+  body {
+    .main {
+      .container-grid {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//mobile small screen
 @media only screen and (max-width: 280px) {
   body {
     header {
@@ -350,5 +395,24 @@ body {
       }
     }
     
+    .main {
+      margin: 0;
+
+      .container-grid {
+        .landing-page {
+          .landing {
+            padding: 0 2rem 0 2rem;
+          }
+          .about-me {
+            padding: 0 2rem 0 2rem;
+          }
+          .projects {
+            h2 {
+              padding: 0 2rem 0 2rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

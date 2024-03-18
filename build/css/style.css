@@ -18,14 +18,14 @@ a {
   text-decoration: none;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 body {
@@ -69,7 +69,6 @@ body .main {
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 125px);
   max-width: 100vw;
 }
 body .main .container-grid {
@@ -95,6 +94,13 @@ body .main .container-grid .landing-page .landing .landing-text .social-media-li
 body .main .container-grid .landing-page .landing .landing-text .social-media-links div {
   padding: 0;
   margin: 0 5px;
+}
+body .main .container-grid .landing-page .about-me a {
+  color: #1d1d20;
+}
+body .main .container-grid .landing-page .about-me a:hover {
+  color: #f5cd07;
+  cursor: pointer;
 }
 body .main .container-grid .landing-page .projects .projects-row {
   display: grid;
@@ -135,10 +141,10 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
   color: #1d1d20;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   body {
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
   }
   body header {
     padding: 2rem 4rem 0rem 4rem;
@@ -148,7 +154,7 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
   }
   body .main {
     height: calc(100% - 125px);
-    overflow-y: auto;
+    overflow-y: visible;
     max-width: 100vw;
     margin: 0rem 4rem 0rem 4rem;
   }
@@ -202,7 +208,7 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
     margin: 0 5px;
   }
   body .main .container-grid .landing-page .about-me {
-    padding-top: 3rem;
+    padding-top: 80px;
     color: #1d1d20;
   }
   body .main .container-grid .landing-page .projects {
@@ -215,7 +221,6 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
   body .main .container-grid .landing-page .projects h2 {
     font-size: 1.3em;
     margin-bottom: 1em;
-    transition: 0.5s;
   }
   body .main .container-grid .landing-page .projects h2:hover {
     color: #fddb3a;
@@ -250,16 +255,17 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
     color: #1d1d20;
   }
   body .main .container-grid .sidebar div a:hover {
-    color: #9b8726;
+    color: #f5cd07;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
   body .main {
     margin: 0rem 2rem 0rem 2rem;
   }
   body .main .container-grid {
     margin-top: 70px;
     color: #1d1d20;
+    display: grid;
   }
   body .main .container-grid .landing-page .landing {
     margin-bottom: 80px;
@@ -272,14 +278,54 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
   }
   body .main .container-grid .landing-page .projects .projects-row {
     gap: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   body .main .container-grid .landing-page .projects .projects-row .project {
     position: relative;
+  }
+  body .main .container-grid .sidebar {
+    background-color: #ffffff;
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: 2px;
+    align-self: start;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body .main .container-grid .sidebar div {
+    margin-top: 20px;
+    color: #1d1d20;
+    height: 40px;
+    padding: 1.5em;
+  }
+  body .main .container-grid .sidebar div a {
+    color: #1d1d20;
+  }
+}
+@media only screen and (max-width: 1280px) and (orientation: landscape) {
+  body .main .container-grid {
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 280px) {
   body header .navb .logo .brand span:nth-child(1) {
     display: none;
+  }
+  body .main {
+    margin: 0;
+  }
+  body .main .container-grid .landing-page .landing {
+    padding: 0 2rem 0 2rem;
+  }
+  body .main .container-grid .landing-page .about-me {
+    padding: 0 2rem 0 2rem;
+  }
+  body .main .container-grid .landing-page .projects h2 {
+    padding: 0 2rem 0 2rem;
   }
 }
 
