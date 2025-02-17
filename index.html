@@ -21,7 +21,7 @@
             <nav class="navb">
                 <div class="logo">
                     <a href="/">
-                    <img src="img/e-logo.jpg" alt="e-logo">
+                    <img src="img/e-logo.jpg" alt="logo">
                         <span class="brand bold">
                             <span>Evans</span>
                             <span>Ochieng</span>
@@ -46,9 +46,8 @@
                         <div class="landing-text">
                             <h2>Evans Ochola Ochieng</h2>                       
                             <p>
-                                Data Scientist | Software Engineer
-                                <br>
-                                Postgrad at University of Surrey
+                                Data Scientist | Data Engineer
+
                             </p>
                             <div class="social-media-links">
                                 <div>
@@ -107,6 +106,15 @@
                             </li>
                         </ul>
                     </section>
+                    <div>
+                        Pyscript
+                        <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
+                        <p>Translate English into Pirate speak...</p>
+                        <input type="text" id="english" placeholder="Type English here..." />
+                        <button py-click="translate_english">Translate</button>
+                        <div id="output"></div>
+                        <script type="py" src="src/py/main.py" config="./pyscript.json"></script>
+                    </div>
                 </div>
                 <div id="sidebar" class="sidebar" style="display: none;">
                     <div>
@@ -138,5 +146,6 @@
         nomodule
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
+        <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
     </body>
 </html>

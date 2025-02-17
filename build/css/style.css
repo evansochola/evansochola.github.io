@@ -129,6 +129,9 @@ body .main .container-grid .landing-page .landing .landing-text .social-media-li
   padding: 0;
   margin: 0 5px;
 }
+body .main .container-grid .landing-page .about-me {
+  width: 75%;
+}
 body .main .container-grid .landing-page .about-me a {
   color: #1d1d20;
 }
@@ -147,12 +150,12 @@ body .main .container-grid .landing-page .projects .projects-row {
   grid-auto-rows: minmax(100px, auto);
 }
 body .main .container-grid .landing-page .projects .projects-row .project {
+  padding: 20px;
   background-color: #ffffff;
   width: 100%;
   border-width: 1px;
   background-color: #ffffff;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 1.2rem;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 }
 body .main .container-grid .landing-page .projects .projects-row .project .project-image {
@@ -162,13 +165,11 @@ body .main .container-grid .landing-page .projects .projects-row .project .proje
   margin: 0;
 }
 body .main .container-grid .landing-page .projects .projects-row .project .project-image img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 body .main .container-grid .landing-page .projects .projects-row .project .project-text {
   padding-top: 1rem;
-  padding-left: 1rem;
   border-width: 1px;
 }
 body .main .container-grid .landing-page .projects .projects-row .project .project-text h5 {
@@ -278,7 +279,6 @@ body .main .container-grid .about-page span {
   }
   body .main .container-grid .landing-page .projects .projects-row .project {
     position: relative;
-    border-radius: 0.2rem;
   }
   body .main .container-grid .landing-page .projects .projects-row .project .project-info {
     grid-template-rows: 1fr 0fr 0fr;

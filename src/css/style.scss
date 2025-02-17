@@ -147,6 +147,7 @@ body {
           }
         }
         .about-me {
+          width: 75%;
           a {
             color: v.$black-light;
 
@@ -169,12 +170,12 @@ body {
             grid-auto-rows: minmax(100px, auto);
 
             .project {
+              padding: 20px;
               background-color: v.$white-plain;
               width: 100%;
               border-width: 1px;
               background-color: v.$white-plain;
-              border-top-left-radius: 8px;
-              border-top-right-radius: 8px;
+              border-radius: 1.2rem;
               box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 
               .project-image {
@@ -184,14 +185,12 @@ body {
                 margin: 0;
                 
                 img {
-                  border-top-left-radius: 8px;
-                  border-top-right-radius: 8px;
+                  border-radius: 0.5rem;
                   cursor: pointer;
                 }
               }
               .project-text {
                 padding-top: 1rem;
-                padding-left: 1rem;
                 border-width: 1px;
                 
                 h5 {
@@ -321,7 +320,7 @@ body {
 
               .project {
                 position: relative;
-                border-radius: 0.2rem;
+
   
                 .project-info {
                   grid-template-rows: 1fr 0fr 0fr;
