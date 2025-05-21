@@ -6,9 +6,9 @@ Access it here : https://evansochola.github.io
 
 #### Technologies used
 
-HTML5, CSS3
-CSS Preprocessor - SASS
+Html, Css, Sass (Css preprocesser)
 
-#### Build commands
 
-sass --watch ./src/css/style.scss:./build/css/style.css
+#### Dev Notes
+Set up Sass - `sass --watch ./src/css/style.scss:./build/css/style.css`
+Cleans up local branches - `git fetch --prune` 
