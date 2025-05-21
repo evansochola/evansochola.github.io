@@ -361,114 +361,114 @@ body {
     }
   }
 }
+//
+////responsive version
+//@media only screen and (max-width: 1280px){
+//  body {
+//    .main {
+//      margin: 0rem 2rem 0rem 2rem;
+//
+//      .container-grid {
+//        margin-top: 70px;
+//        color: v.$black-dark;
+//        display: grid;
+//
+//        .landing-page {
+//          .landing {
+//            margin-bottom: 80px;
+//            .landing-text {
+//              p {
+//                font-size: v.$font-size-small;
+//              }
+//            }
+//          }
+//          .projects {
+//            margin-bottom: 2rem;
+//
+//            .projects-row {
+//              gap: 5rem;
+//              padding-left: 1rem;
+//              padding-right: 1rem;
+//
+//              .project {
+//                position: relative;
+//              }
+//            }
+//          }
+//        }
+//        .sidebar {
+//          background-color: v.$white-plain;
+//          border-right-style: none;
+//          border-top-style: none;
+//          border-bottom-style: none;
+//          border-width: 2px;
+//          align-self: start;
+//          position: fixed;
+//          width: 100vw;
+//          height: 100vh;
+//          overflow: hidden;
+//
+//          div {
+//            margin-top: 20px;
+//            color: v.$black-dark;
+//            height: 40px;
+//            padding: 1.5em;
+//
+//            a {
+//              color: v.$black-dark;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
 
-//responsive version
-@media only screen and (max-width: 1280px){
-  body {
-    .main {
-      margin: 0rem 2rem 0rem 2rem;
+//@media only screen and (max-width: 1280px) and (orientation: landscape) {
+//  body {
+//    .main {
+//      .container-grid {
+//        margin-top: 0;
+//      }
+//    }
+//  }
+//}
 
-      .container-grid {
-        margin-top: 70px;
-        color: v.$black-dark;
-        display: grid;
-
-        .landing-page {
-          .landing {
-            margin-bottom: 80px;
-            .landing-text {
-              p {
-                font-size: v.$font-size-small;
-              }
-            }
-          }
-          .projects {
-            margin-bottom: 2rem;
-
-            .projects-row {
-              gap: 5rem;
-              padding-left: 1rem;
-              padding-right: 1rem;
-
-              .project {
-                position: relative;
-              }
-            }
-          }
-        }
-        .sidebar {
-          background-color: v.$white-plain;
-          border-right-style: none;
-          border-top-style: none;
-          border-bottom-style: none;
-          border-width: 2px;
-          align-self: start;
-          position: fixed;
-          width: 100vw;
-          height: 100vh;
-          overflow: hidden;
-          
-          div {
-            margin-top: 20px;
-            color: v.$black-dark;
-            height: 40px;
-            padding: 1.5em;
-
-            a {
-              color: v.$black-dark;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1280px) and (orientation: landscape) {
-  body {
-    .main {
-      .container-grid {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-//mobile small screen
-@media only screen and (max-width: 280px) {
-  body {
-    header {
-      .navb {
-        .logo {
-          .brand {
-            span {
-              &:nth-child(1) {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-    
-    .main {
-      margin: 0;
-
-      .container-grid {
-        .landing-page {
-          .landing {
-            padding: 0 2rem 0 2rem;
-          }
-          .about-me {
-            padding: 0 2rem 0 2rem;
-          }
-          .projects {
-            h2 {
-              padding: 0 2rem 0 2rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+////mobile small screen
+//@media only screen and (max-width: 280px) {
+//  body {
+//    header {
+//      .navb {
+//        .logo {
+//          .brand {
+//            span {
+//              &:nth-child(1) {
+//                display: none;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//
+//    .main {
+//      margin: 0;
+//
+//      .container-grid {
+//        .landing-page {
+//          .landing {
+//            padding: 0 2rem 0 2rem;
+//          }
+//          .about-me {
+//            padding: 0 2rem 0 2rem;
+//          }
+//          .projects {
+//            h2 {
+//              padding: 0 2rem 0 2rem;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
