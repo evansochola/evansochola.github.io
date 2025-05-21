@@ -75,14 +75,11 @@ body header .navb {
   justify-content: space-between;
   align-items: center;
 }
-body header .navb .logo img {
-  width: 60px;
-  height: 60px;
-}
 body header .navb .logo .brand {
   color: #111111;
   font-size: 1.1em;
   line-height: 1.5;
+  margin-left: 2rem;
 }
 body header .navb div {
   margin: auto 2rem auto 0;

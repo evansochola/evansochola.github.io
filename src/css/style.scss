@@ -81,14 +81,11 @@ body {
       align-items: center;
 
       .logo {
-        img {
-          width: 60px;
-          height: 60px;
-        }
         .brand {
           color: v.$black-dark;
           font-size: v.$font-size-mid;
           line-height: 1.5;
+          margin-left: 2rem;
         }
       }
       
