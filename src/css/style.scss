@@ -19,6 +19,12 @@ h1 {
 h2 {
   font-size: v.$font-size-titles;
   color: v.$black-dark;
+
+}
+
+h3 {
+  font-size: v.$font-size-mid;
+  color: v.$black-dark;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -65,8 +71,8 @@ body {
   width: 100%;
 
   #prof-pic {
-    width: 220px;
-    height: 250px;
+    width: 120px;
+    height: 150px;
   }
 
   header {
@@ -81,14 +87,11 @@ body {
       align-items: center;
 
       .logo {
-        img {
-          width: 60px;
-          height: 60px;
-        }
         .brand {
           color: v.$black-dark;
           font-size: v.$font-size-mid;
           line-height: 1.5;
+          margin-left: 2rem;
         }
       }
       
@@ -112,28 +115,52 @@ body {
     .container-grid {
       display: grid;
 
+      //not sure what this does?
       .page-wrapper {
         grid-column: 2 / 3;
       }
 
       .landing-page {
+        display: grid;
+        grid-template-areas:
+                "left-column right-column";
+        grid-template-columns: 2fr 3fr;
+
         .landing {
+          grid-area: left-column;
+          padding: 3rem 1rem 3rem 0;
+          height: 85vh;
           .landing-image {
             text-align: center;
           }
           .landing-text {
+            display: flex;
+            flex-direction: column;
+            padding-left: 3em;
+            height: 100%;
             h2 {
+              font-size: 2.2em;
+              letter-spacing: -0.04em;
+              line-height: 1;
               color: v.$black-light;
             }
-            text-align: center;
-            p {
+            h3 {
+              margin-top: 1em;
               font-size: v.$font-size-mid;
+              letter-spacing: -0.04em;
               line-height: 20px;
+            }
+            p {
+              margin-top: 1em;
+              font-size: v.$font-size-mid;
+              letter-spacing: -0.04em;
+            }
+            .contact{
+              margin-top: auto;
             }
             .social-media-links {
               display: flex;
               flex-direction: row;
-              justify-content: center;
 
               a {
                 color: v.$black-dark;
@@ -141,13 +168,20 @@ body {
 
               div {
                 padding: 0;
-                margin: 0 5px;
+                margin: 0 1rem 0 0;
               }
             }
           }
+          overflow: hidden;
         }
-        .about-me {
-          width: 75%;
+        .right-column{
+          grid-area: right-column;
+          padding: 3rem 3rem;
+          height: 85vh;
+          overflow-y: scroll;
+
+          .about-me {
+            width: 100%;
           a {
             color: v.$black-light;
 
@@ -157,42 +191,56 @@ body {
             }
           }
         }
-        .projects {
+          .projects {
           .projects-head {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
+            h3 {
+              text-decoration-line: underline;
+              text-decoration-color: v.$yellow-light;
+              text-decoration-thickness: 0.2rem;
+              text-underline-offset: 1rem;
+            }
+
           }
           .projects-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             grid-auto-rows: minmax(100px, auto);
+            gap: 3rem;
 
             .project {
-              padding: 20px;
+              display: grid;
+              grid-template-columns: 1fr 4fr ;
+              gap: 1rem;
+              margin-right: 1rem;
+              padding: 10px;
               background-color: v.$white-plain;
               width: 100%;
               border-width: 1px;
               background-color: v.$white-plain;
               border-radius: 1.2rem;
+
+              &:hover {
               box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+
+              }
 
               .project-image {
                 width: 100%;
-                height: 150px;
                 padding: 0;
                 margin: 0;
-                
+
                 img {
+                  max-width: 100%;
                   border-radius: 0.5rem;
                   cursor: pointer;
                 }
               }
               .project-text {
-                padding-top: 1rem;
                 border-width: 1px;
-                
+
                 h5 {
                   margin-bottom: 0.5rem;
                 }
@@ -203,8 +251,10 @@ body {
                   color: v.$black-dark;
                 }
               }
+
             }
           }
+        }
         }
       }
 
@@ -223,255 +273,255 @@ body {
   }
 }
 
-// Desktop version
-@media (min-width: 1281px) {
-  body {
-    height: 100vh;
-    overflow-y: auto;
+//// Desktop version
+//@media (min-width: 1281px) {
+//  body {
+//    height: 100vh;
+//    overflow-y: auto;
+//
+//    header {
+//      padding: 2rem 4rem 0rem 4rem;
+//      .navb .logo .brand {
+//        font-size: v.$font-size-upper-mid;
+//      }
+//    }
+//
+//    .main {
+//      height: calc(100% - 125px);
+//      overflow-y: visible;
+//      max-width: 100vw;
+//      margin: 0rem 4rem 0rem 4rem;
+//
+//      .container-grid {
+//        grid-template-columns: 1fr 4.3fr 1fr;
+//        grid-auto-rows: minmax(800px, auto);
+//
+//        .landing-page {
+//          padding: 3rem 5rem 0rem 5rem;
+//          grid-column: 2 / 3;
+//
+//          .landing {
+//            margin: 0;
+//            padding: 0;
+//            padding-top: 60px;
+//            display: flex;
+//            flex-direction: row-reverse;
+//            justify-content: space-between;
+//            text-align: center;
+//            max-width: 100%;
+//            font-size: v.$font-size-small;
+//            background-color: v.$white-plain;
+//            margin-bottom: 5rem;
+//
+//            .landing-image {
+//              padding: 0 0 0 0;
+//              display: flex;
+//              flex-direction: column;
+//              justify-content: center;
+//              text-align: center;
+//
+//              div {
+//                padding: inherit;
+//              }
+//            }
+//            .landing-text {
+//              padding: 0 0 0 0;
+//
+//              p {
+//                font-size: v.$font-size-mid;
+//                line-height: 30px;
+//              }
+//              .social-media-links {
+//                display: flex;
+//                flex-direction: row;
+//                justify-content: center;
+//
+//                div {
+//                  padding: 0;
+//                  margin: 0 5px;
+//                }
+//              }
+//            }
+//          }
+//          .about-me {
+//            padding-top: 80px;
+//          }
+//          .projects {
+//            background-color: v.$white-plain;
+//            display: flex;
+//            flex-direction: column;
+//            color:v.$black-dark;
+//            margin-top: 2rem;
+//            margin-bottom: 2rem;
+//
+//            h2 {
+//              font-size: v.$font-size-upper-mid;
+//              margin-bottom: 1em;
+//
+//              &:hover {
+//                color: v.$yellow;
+//              }
+//            }
+//
+//            .projects-row {
+//              margin-top: 2rem;
+//              gap: 7rem;
+//              margin-bottom: 8rem;
+//
+//              .project {
+//                position: relative;
+//
+//
+//                .project-info {
+//                  grid-template-rows: 1fr 0fr 0fr;
+//                }
+//              }
+//            }
+//          }
+//        }
+//        .sidebar {
+//          z-index: 999;
+//          grid-column:3 / 4;
+//          background-color: v.$white-plain;
+//          border-style: solid;
+//          border-right-style: none;
+//          border-top-style: none;
+//          border-bottom-style: none;
+//          border-width: 2px;
+//          align-self: start;
+//
+//          div {
+//            margin-top: 20px;
+//            color:v.$black-dark;
+//            height: 40px;
+//            padding: 1.5em;
+//
+//            a {
+//              color: v.$black-dark;
+//
+//              &:hover {
+//                color: v.$yellow-light;
+//              }
+//            }
+//          }
+//        }
+//        .about-page {
+//          grid-column: 2 / 3;
+//          padding: 7rem 15rem 5rem 15rem;
+//
+//        }
+//      }
+//    }
+//  }
+//}
+//
+////responsive version
+//@media only screen and (max-width: 1280px){
+//  body {
+//    .main {
+//      margin: 0rem 2rem 0rem 2rem;
+//
+//      .container-grid {
+//        margin-top: 70px;
+//        color: v.$black-dark;
+//        display: grid;
+//
+//        .landing-page {
+//          .landing {
+//            margin-bottom: 80px;
+//            .landing-text {
+//              p {
+//                font-size: v.$font-size-small;
+//              }
+//            }
+//          }
+//          .projects {
+//            margin-bottom: 2rem;
+//
+//            .projects-row {
+//              gap: 5rem;
+//              padding-left: 1rem;
+//              padding-right: 1rem;
+//
+//              .project {
+//                position: relative;
+//              }
+//            }
+//          }
+//        }
+//        .sidebar {
+//          background-color: v.$white-plain;
+//          border-right-style: none;
+//          border-top-style: none;
+//          border-bottom-style: none;
+//          border-width: 2px;
+//          align-self: start;
+//          position: fixed;
+//          width: 100vw;
+//          height: 100vh;
+//          overflow: hidden;
+//
+//          div {
+//            margin-top: 20px;
+//            color: v.$black-dark;
+//            height: 40px;
+//            padding: 1.5em;
+//
+//            a {
+//              color: v.$black-dark;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
 
-    header {
-      padding: 2rem 4rem 0rem 4rem;
-      .navb .logo .brand {
-        font-size: v.$font-size-upper-mid;
-      }
-    }
- 
-    .main {
-      height: calc(100% - 125px);
-      overflow-y: visible;
-      max-width: 100vw;
-      margin: 0rem 4rem 0rem 4rem;
+//@media only screen and (max-width: 1280px) and (orientation: landscape) {
+//  body {
+//    .main {
+//      .container-grid {
+//        margin-top: 0;
+//      }
+//    }
+//  }
+//}
 
-      .container-grid {
-        grid-template-columns: 1fr 4.3fr 1fr;
-        grid-auto-rows: minmax(800px, auto);
-
-        .landing-page {
-          padding: 3rem 5rem 0rem 5rem;
-          grid-column: 2 / 3;
-
-          .landing {
-            margin: 0;
-            padding: 0;
-            padding-top: 60px;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            text-align: center;
-            max-width: 100%;
-            font-size: v.$font-size-small;
-            background-color: v.$white-plain;
-            margin-bottom: 5rem;
-
-            .landing-image {
-              padding: 0 0 0 0;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              text-align: center;
-
-              div {
-                padding: inherit;
-              }
-            }
-            .landing-text {
-              padding: 0 0 0 0;
-
-              p {
-                font-size: v.$font-size-mid;
-                line-height: 30px;
-              }
-              .social-media-links {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                
-                div {
-                  padding: 0;
-                  margin: 0 5px;
-                }
-              }
-            }
-          }
-          .about-me {
-            padding-top: 80px;
-          }
-          .projects {
-            background-color: v.$white-plain;
-            display: flex;
-            flex-direction: column;
-            color:v.$black-dark;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-
-            h2 {
-              font-size: v.$font-size-upper-mid;
-              margin-bottom: 1em;
-  
-              &:hover {
-                color: v.$yellow;
-              }
-            }
-  
-            .projects-row {
-              margin-top: 2rem;
-              gap: 7rem;
-              margin-bottom: 8rem;
-
-              .project {
-                position: relative;
-
-  
-                .project-info {
-                  grid-template-rows: 1fr 0fr 0fr;
-                }
-              }
-            }
-          }
-        }
-        .sidebar {
-          z-index: 999;
-          grid-column:3 / 4;
-          background-color: v.$white-plain;
-          border-style: solid;
-          border-right-style: none;
-          border-top-style: none;
-          border-bottom-style: none;
-          border-width: 2px;
-          align-self: start;
-
-          div {
-            margin-top: 20px;
-            color:v.$black-dark;
-            height: 40px;
-            padding: 1.5em;
-
-            a {
-              color: v.$black-dark;
-
-              &:hover {
-                color: v.$yellow-light;
-              }
-            }
-          }
-        }
-        .about-page {
-          grid-column: 2 / 3;
-          padding: 7rem 15rem 5rem 15rem;
-          
-        }
-      }
-    }
-  }
-}
-
-//responsive version
-@media only screen and (max-width: 1280px){
-  body {
-    .main {
-      margin: 0rem 2rem 0rem 2rem;
-
-      .container-grid {
-        margin-top: 70px;
-        color: v.$black-dark;
-        display: grid;
-
-        .landing-page {
-          .landing {
-            margin-bottom: 80px;
-            .landing-text {
-              p {
-                font-size: v.$font-size-small;
-              }
-            }
-          }
-          .projects {
-            margin-bottom: 2rem;
-
-            .projects-row {
-              gap: 5rem;
-              padding-left: 1rem;
-              padding-right: 1rem;
-
-              .project {
-                position: relative;
-              }
-            }
-          }
-        }
-        .sidebar {
-          background-color: v.$white-plain;
-          border-right-style: none;
-          border-top-style: none;
-          border-bottom-style: none;
-          border-width: 2px;
-          align-self: start;
-          position: fixed;
-          width: 100vw;
-          height: 100vh;
-          overflow: hidden;
-          
-          div {
-            margin-top: 20px;
-            color: v.$black-dark;
-            height: 40px;
-            padding: 1.5em;
-
-            a {
-              color: v.$black-dark;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1280px) and (orientation: landscape) {
-  body {
-    .main {
-      .container-grid {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-//mobile small screen
-@media only screen and (max-width: 280px) {
-  body {
-    header {
-      .navb {
-        .logo {
-          .brand {
-            span {
-              &:nth-child(1) {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-    
-    .main {
-      margin: 0;
-
-      .container-grid {
-        .landing-page {
-          .landing {
-            padding: 0 2rem 0 2rem;
-          }
-          .about-me {
-            padding: 0 2rem 0 2rem;
-          }
-          .projects {
-            h2 {
-              padding: 0 2rem 0 2rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+////mobile small screen
+//@media only screen and (max-width: 280px) {
+//  body {
+//    header {
+//      .navb {
+//        .logo {
+//          .brand {
+//            span {
+//              &:nth-child(1) {
+//                display: none;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//
+//    .main {
+//      margin: 0;
+//
+//      .container-grid {
+//        .landing-page {
+//          .landing {
+//            padding: 0 2rem 0 2rem;
+//          }
+//          .about-me {
+//            padding: 0 2rem 0 2rem;
+//          }
+//          .projects {
+//            h2 {
+//              padding: 0 2rem 0 2rem;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
