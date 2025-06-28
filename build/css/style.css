@@ -17,6 +17,11 @@ h1 {
 h2 {
   font-size: 1.8em;
   color: #111111;
+}
+
+h3 {
+  font-size: 1.1em;
+  color: #111111;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -61,8 +66,8 @@ body {
   width: 100%;
 }
 body #prof-pic {
-  width: 220px;
-  height: 250px;
+  width: 120px;
+  height: 150px;
 }
 body header {
   max-height: 100vh;
@@ -101,78 +106,121 @@ body .main .container-grid {
 body .main .container-grid .page-wrapper {
   grid-column: 2/3;
 }
+body .main .container-grid .landing-page {
+  display: grid;
+  grid-template-areas: "left-column right-column";
+  grid-template-columns: 2fr 3fr;
+}
+body .main .container-grid .landing-page .landing {
+  grid-area: left-column;
+  padding: 3rem 1rem 3rem 0;
+  height: 85vh;
+  overflow: hidden;
+}
 body .main .container-grid .landing-page .landing .landing-image {
   text-align: center;
 }
 body .main .container-grid .landing-page .landing .landing-text {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3em;
+  height: 100%;
 }
 body .main .container-grid .landing-page .landing .landing-text h2 {
+  font-size: 2.2em;
+  letter-spacing: -0.04em;
+  line-height: 1;
   color: #1d1d20;
 }
-body .main .container-grid .landing-page .landing .landing-text p {
+body .main .container-grid .landing-page .landing .landing-text h3 {
+  margin-top: 1em;
   font-size: 1.1em;
+  letter-spacing: -0.04em;
   line-height: 20px;
+}
+body .main .container-grid .landing-page .landing .landing-text p {
+  margin-top: 1em;
+  font-size: 1.1em;
+  letter-spacing: -0.04em;
+}
+body .main .container-grid .landing-page .landing .landing-text .contact {
+  margin-top: auto;
 }
 body .main .container-grid .landing-page .landing .landing-text .social-media-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 body .main .container-grid .landing-page .landing .landing-text .social-media-links a {
   color: #111111;
 }
 body .main .container-grid .landing-page .landing .landing-text .social-media-links div {
   padding: 0;
-  margin: 0 5px;
+  margin: 0 1rem 0 0;
 }
-body .main .container-grid .landing-page .about-me {
-  width: 75%;
+body .main .container-grid .landing-page .right-column {
+  grid-area: right-column;
+  padding: 3rem 3rem;
+  height: 85vh;
+  overflow-y: scroll;
 }
-body .main .container-grid .landing-page .about-me a {
+body .main .container-grid .landing-page .right-column .about-me {
+  width: 100%;
+}
+body .main .container-grid .landing-page .right-column .about-me a {
   color: #1d1d20;
 }
-body .main .container-grid .landing-page .about-me a:hover {
+body .main .container-grid .landing-page .right-column .about-me a:hover {
   color: #f5cd07;
   cursor: pointer;
 }
-body .main .container-grid .landing-page .projects .projects-head {
+body .main .container-grid .landing-page .right-column .projects .projects-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body .main .container-grid .landing-page .projects .projects-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
+body .main .container-grid .landing-page .right-column .projects .projects-head h3 {
+  text-decoration-line: underline;
+  text-decoration-color: #f5cd07;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 1rem;
 }
-body .main .container-grid .landing-page .projects .projects-row .project {
-  padding: 20px;
+body .main .container-grid .landing-page .right-column .projects .projects-row {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  gap: 3rem;
+}
+body .main .container-grid .landing-page .right-column .projects .projects-row .project {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  margin-right: 1rem;
+  padding: 10px;
   background-color: #ffffff;
   width: 100%;
   border-width: 1px;
   background-color: #ffffff;
   border-radius: 1.2rem;
+}
+body .main .container-grid .landing-page .right-column .projects .projects-row .project:hover {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
 }
-body .main .container-grid .landing-page .projects .projects-row .project .project-image {
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-image {
   width: 100%;
-  height: 150px;
   padding: 0;
   margin: 0;
 }
-body .main .container-grid .landing-page .projects .projects-row .project .project-image img {
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-image img {
+  max-width: 100%;
   border-radius: 0.5rem;
   cursor: pointer;
 }
-body .main .container-grid .landing-page .projects .projects-row .project .project-text {
-  padding-top: 1rem;
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text {
   border-width: 1px;
 }
-body .main .container-grid .landing-page .projects .projects-row .project .project-text h5 {
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text h5 {
   margin-bottom: 0.5rem;
 }
-body .main .container-grid .landing-page .projects .projects-row .project .project-text a {
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text a {
   display: block;
   width: 90%;
   color: #111111;
@@ -185,128 +233,6 @@ body .main .container-grid .about-page a {
 }
 body .main .container-grid .about-page span {
   color: #edc352;
-}
-
-@media (min-width: 1281px) {
-  body {
-    height: 100vh;
-    overflow-y: auto;
-  }
-  body header {
-    padding: 2rem 4rem 0rem 4rem;
-  }
-  body header .navb .logo .brand {
-    font-size: 1.3em;
-  }
-  body .main {
-    height: calc(100% - 125px);
-    overflow-y: visible;
-    max-width: 100vw;
-    margin: 0rem 4rem 0rem 4rem;
-  }
-  body .main .container-grid {
-    grid-template-columns: 1fr 4.3fr 1fr;
-    grid-auto-rows: minmax(800px, auto);
-  }
-  body .main .container-grid .landing-page {
-    padding: 3rem 5rem 0rem 5rem;
-    grid-column: 2/3;
-  }
-  body .main .container-grid .landing-page .landing {
-    margin: 0;
-    padding: 0;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    text-align: center;
-    max-width: 100%;
-    font-size: 0.9em;
-    background-color: #ffffff;
-    margin-bottom: 5rem;
-  }
-  body .main .container-grid .landing-page .landing .landing-image {
-    padding: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  body .main .container-grid .landing-page .landing .landing-image div {
-    padding: inherit;
-  }
-  body .main .container-grid .landing-page .landing .landing-text {
-    padding: 0 0 0 0;
-  }
-  body .main .container-grid .landing-page .landing .landing-text p {
-    font-size: 1.1em;
-    line-height: 30px;
-  }
-  body .main .container-grid .landing-page .landing .landing-text .social-media-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  body .main .container-grid .landing-page .landing .landing-text .social-media-links div {
-    padding: 0;
-    margin: 0 5px;
-  }
-  body .main .container-grid .landing-page .about-me {
-    padding-top: 80px;
-  }
-  body .main .container-grid .landing-page .projects {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    color: #111111;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  body .main .container-grid .landing-page .projects h2 {
-    font-size: 1.3em;
-    margin-bottom: 1em;
-  }
-  body .main .container-grid .landing-page .projects h2:hover {
-    color: #fddb3a;
-  }
-  body .main .container-grid .landing-page .projects .projects-row {
-    margin-top: 2rem;
-    gap: 7rem;
-    margin-bottom: 8rem;
-  }
-  body .main .container-grid .landing-page .projects .projects-row .project {
-    position: relative;
-  }
-  body .main .container-grid .landing-page .projects .projects-row .project .project-info {
-    grid-template-rows: 1fr 0fr 0fr;
-  }
-  body .main .container-grid .sidebar {
-    z-index: 999;
-    grid-column: 3/4;
-    background-color: #ffffff;
-    border-style: solid;
-    border-right-style: none;
-    border-top-style: none;
-    border-bottom-style: none;
-    border-width: 2px;
-    align-self: start;
-  }
-  body .main .container-grid .sidebar div {
-    margin-top: 20px;
-    color: #111111;
-    height: 40px;
-    padding: 1.5em;
-  }
-  body .main .container-grid .sidebar div a {
-    color: #111111;
-  }
-  body .main .container-grid .sidebar div a:hover {
-    color: #f5cd07;
-  }
-  body .main .container-grid .about-page {
-    grid-column: 2/3;
-    padding: 7rem 15rem 5rem 15rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
