@@ -176,10 +176,14 @@ body {
         }
         .right-column{
           grid-area: right-column;
-          padding: 3rem 3rem;
+          padding: 3rem 6rem;
           height: 85vh;
           overflow-y: scroll;
 
+          p, span {
+            font-size: v.$font-size-small;
+            line-height: 2;
+          }
           .about-me {
             width: 100%;
           a {
@@ -219,8 +223,8 @@ body {
               background-color: v.$white-plain;
               width: 100%;
               border-width: 1px;
-              background-color: v.$white-plain;
               border-radius: 1.2rem;
+              //font-size: v.$font-size-small;
 
               &:hover {
               box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
@@ -242,6 +246,7 @@ body {
                 border-width: 1px;
 
                 h5 {
+                  font-size: v.$font-size-small;
                   margin-bottom: 0.5rem;
                 }
 
@@ -250,8 +255,89 @@ body {
                   width: 90%;
                   color: v.$black-dark;
                 }
+
+                ul {
+                  display: flex;
+                  font-size: v.$font-size-very-small;
+
+                  li {
+                    background-color: v.$experiment;
+                    border-color: v.$experiment;
+                    color: v.$white-plain;
+                    padding: .20rem;
+                    margin-right: .375rem;
+                  }
+                }
               }
 
+            }
+          }
+        }
+          .experience {
+          .experience-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+              text-decoration-line: underline;
+              text-decoration-color: v.$yellow-light;
+              text-decoration-thickness: 0.2rem;
+              text-underline-offset: 1rem;
+            }
+
+          }
+          .experience-row {
+            display: grid;
+            grid-auto-rows: minmax(100px, auto);
+            gap: 3rem;
+
+            .experience {
+              display: grid;
+              grid-template-columns: 1fr 4fr;
+              gap: 1rem;
+              margin-right: 1rem;
+              padding: 10px;
+              background-color: v.$white-plain;
+              width: 100%;
+              border-width: 1px;
+              border-radius: 1.2rem;
+              //font-size: v.$font-size-small;
+
+              &:hover {
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+
+              }
+
+              .experience-image {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+
+                img {
+                  max-width: 100%;
+                  border-radius: 0.5rem;
+                  cursor: pointer;
+                }
+              }
+
+              .experience-text {
+                border-width: 1px;
+
+                h5 {
+                  font-size: v.$font-size-small;
+                  margin-bottom: 0.5rem;
+                }
+
+                a {
+                  display: block;
+                  width: 90%;
+                  color: v.$black-dark;
+                  &:hover{
+                    color: v.$gold;
+                  }
+                }
+              }
             }
           }
         }

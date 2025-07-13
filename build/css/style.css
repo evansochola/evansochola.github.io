@@ -159,9 +159,13 @@ body .main .container-grid .landing-page .landing .landing-text .social-media-li
 }
 body .main .container-grid .landing-page .right-column {
   grid-area: right-column;
-  padding: 3rem 3rem;
+  padding: 3rem 6rem;
   height: 85vh;
   overflow-y: scroll;
+}
+body .main .container-grid .landing-page .right-column p, body .main .container-grid .landing-page .right-column span {
+  font-size: 0.9em;
+  line-height: 2;
 }
 body .main .container-grid .landing-page .right-column .about-me {
   width: 100%;
@@ -198,7 +202,6 @@ body .main .container-grid .landing-page .right-column .projects .projects-row .
   background-color: #ffffff;
   width: 100%;
   border-width: 1px;
-  background-color: #ffffff;
   border-radius: 1.2rem;
 }
 body .main .container-grid .landing-page .right-column .projects .projects-row .project:hover {
@@ -218,12 +221,79 @@ body .main .container-grid .landing-page .right-column .projects .projects-row .
   border-width: 1px;
 }
 body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text h5 {
+  font-size: 0.9em;
   margin-bottom: 0.5rem;
 }
 body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text a {
   display: block;
   width: 90%;
   color: #111111;
+}
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text ul {
+  display: flex;
+  font-size: 0.8em;
+}
+body .main .container-grid .landing-page .right-column .projects .projects-row .project .project-text ul li {
+  background-color: #004d40;
+  border-color: #004d40;
+  color: #ffffff;
+  padding: 0.2rem;
+  margin-right: 0.375rem;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-head h3 {
+  text-decoration-line: underline;
+  text-decoration-color: #f5cd07;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 1rem;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  gap: 3rem;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  margin-right: 1rem;
+  padding: 10px;
+  background-color: #ffffff;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 1.2rem;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-image img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-text {
+  border-width: 1px;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-text h5 {
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-text a {
+  display: block;
+  width: 90%;
+  color: #111111;
+}
+body .main .container-grid .landing-page .right-column .experience .experience-row .experience .experience-text a:hover {
+  color: #edc352;
 }
 body .main .container-grid .sidebar {
   color: #f6f6f6;

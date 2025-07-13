@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA Compatible" content="ie=edge" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <title>Evans Ochieng | Data Analyst</title>
         <meta name="author" content="Evans Ochieng" />
         <meta name="description" content="I'm Evans Ochieng, a data analyst focused on transforming raw data into meaningful insights that guide confident decisions." />
@@ -12,11 +12,28 @@
         <meta property=og:title content="Evans Ochieng | Data Analyst - Exploring Data with Python & SQL">
         <meta property=og:description content="I'm Evans Ochieng, a data analyst focused on transforming raw data into meaningful insights that guide confident decisions.">
         <meta property=og:type content=website>
-        <meta property=og:site_name content="Evans Ochieng | Data Scientist">
+        <meta property=og:site_name content="Evans Ochieng | Data Analyst">
         <meta property=og:url content=https://evansochieng.com>
     </head>
 
     <body id="body">
+         <header>
+            <!-- Hiding the navbar temporarily-->
+            <nav style="visibility:hidden" class="navb">
+                <div class="logo">
+                    <a href="/">
+                        <span class="brand bold">
+                            <span>Evans</span>
+                            <span>Ochieng</span>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <i class="fas fa-bars" onclick="sidebar()"></i>
+                </div>
+            </nav>
+            <!-- Hiding the navbar temporarily-->
+        </header>
         <main class="main" id="main">
             <div class="container-grid">
                 <div class="landing-page" id="landing-page">
@@ -39,23 +56,18 @@
                             </div>
                             </div>
                         </div>
-
-                        <!-- hide image temporarily-->
-                        <div style="display:none" class="landing-image">
-                            <div>
-                                <img class="img-fluid shadow-sm" id="prof-pic" src="img/potrait.jpg" alt="Photo of Evans Ochola Ochieng">
-                            </div>
-                        </div>
-                        <!-- hide image temporarily-->
                     </div>
                     <div class="right-column">
                         <div class="about-me">
                         <p>
-                            I’m a data analyst focused on transforming raw data into meaningful insights that guide confident decisions. To do this, I utilise my background in programming and statistics to interpret complex data into clear, actionable and accessible insights.
-                            In the past, I have had the opportunity to streamline analytical workflows across a variety of settings, from large corporations to research institutions. In my spare time, I work on one of these projects below.
+                            I work at the intersection of analysis and engineering, designing data workflows that make raw information useful and accessible. With a background in programming, databases and statistics, I build systems that help teams work with data more clearly, efficiently, and at scale.
                         </p>
+                        <p>
+                            My experience spans large corporations and research teams, where I’ve improved analytical workflows to support better decisions and deeper insight. In my spare time, I continue to explore data driven questions through personal projects, some of which are shared below.
+                        </p>
+
                     </div>
-                        <section class="projects">
+                    <section class="projects">
                         <div class="projects-head">
                             <h3>Recent Work</h3>
                             <a href="https://github.com/evansochola?tab=repositories" class="button">
@@ -70,29 +82,62 @@
                                 </div>
                                 <div class="project-text">
                                     <h5><a href="https://github.com/evansochola/house-price-data-exploration">House Price Data Exploration</a></h5>
-                                    <p>House Price Data Exploration</p>
+                                    <p>Exploring the key factors influencing house prices, aiming to support buyers in making informed offers and assist sellers in setting realistic, data driven valuations.</p>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Pandas</li>
+                                        <li>Matplotlib</li>
+                                    </ul>
                                 </div>
                             </li>
-                            <li class="project">
-                                <div class="project-image">
-                                    <a href="https://github.com/evansochola/disease-risk-prediction"><img src="img/disease-risk.jpg" alt="Image of the Disease risk prediction project"></a>
-                                </div>
-                                <div class="project-text">
-                                    <h5><a href="https://github.com/evansochola/disease-risk-prediction">Disease risk prediction</a></h5>
-                                    <p>Disease risk prediction</p>
-                                </div>
-                            </li>
+
                             <li class="project">
                                 <div class="project-image">
                                     <a href="https://github.com/evansochola/XAI-fraud-detection"><img src="img/xai-fraud.jpg" alt="Image of the XAI Fraud Detection project"></a>
                                 </div>
                                 <div class="project-text">
                                     <h5><a href="https://github.com/evansochola/XAI-fraud-detection">Credit card fraud detection</a></h5>
-                                    <p>Credit card fraud detection</p>
+                                    <p>Applying Machine Learning to a simulated credit card dataset to detect fraudulent transactions, with a focus on explaining model behaviour and the decisions made.</p>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Pandas</li>
+                                        <li>Matplotlib</li>
+                                        <li>PyTorch</li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
                     </section>
+                    <section class="experience">
+                        <div class="experience-head">
+                            <h3>Experience</h3>
+                        </div>
+                         <ul class="experience-row">
+                            <li class="experience">
+                                <div class="experience-image">
+                                    2024 - 2024
+                                </div>
+                                <div class="experience-text">
+                                    <h5>Data Analyst, London School of Hygiene and Tropical Medicine</h5>
+                                    <p>I worked on a project assessing the impact of a school feeding programme in urban Kenya. Using
+                                        <a target="_blank" style="display: inline" href="https://www.r-project.org/">R <ion-icon name="open-outline"></ion-icon></a>, I analysed dietary data from over 1,200 children to uncover key nutritional gaps and educational trends. Insights were shared through reports and visualisations, shaping recommendations for future programme design. </p>
+                                </div>
+                            </li>
+                             <li class="experience">
+                                <div class="experience-image">
+                                    2022 - 2023
+                                </div>
+                                <div class="experience-text">
+                                    <h5>Master of Science (MSc) in Data Science, University of Surrey</h5>
+                                    <p>Developed a strong foundation in statistical analysis, machine learning, cloud computing and natural language processing.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <footer>
+                        <h3>Let's Connect</h3>
+                        <p>Feel free to reach out via any of my listed contacts. I'm always open to a conversation and exploring how we can work together.</p>
+                    </footer>
                     </div>
 
                 </div>
@@ -107,17 +152,7 @@
             </div>
         </main>
 
-        <script src="js/router.js">
-        </script>
-        <script
-        src="js/index.js"
-        >
 
-        </script>
-        <script
-        src="https://kit.fontawesome.com/579c4c89ba.js"
-        crossorigin="anonymous"
-        ></script>
         <script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
